@@ -4,6 +4,7 @@ mkdir -p /logs
 service statd start
 python image_similarity/main.py 2>&1 | tee /logs/gunicorn_image_similarity.log &
 python manage.py showmigrations | tee /logs/show_migrate.log
+python manage.py makemigrations --merge | tee /logs/show_migrate.log
 python manage.py migrate | tee /logs/command_migrate.log
 python manage.py showmigrations | tee /logs/show_migrate.log
 python manage.py build_similarity_index 2>&1 | tee /logs/command_build_similarity_index.log
