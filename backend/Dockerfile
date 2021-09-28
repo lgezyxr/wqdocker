@@ -15,7 +15,7 @@
 # RUN pip install torch==1.8.0+cpu torchvision==0.9.0+cpu -f https://download.pytorch.org/whl/torch_stable.html
 # RUN pip install -v --install-option="--no" --install-option="DLIB_USE_CUDA" --install-option="--no" --install-option="USE_AVX_INSTRUCTIONS" --install-option="--no" --install-option="USE_SSE4_INSTRUCTIONS" dlib
 # actual project
-# FROM lgezyxr/wqbackend:base
+FROM lgezyxr/wqbackend:base
 ARG DEBUG
 WORKDIR /code
 # RUN git clone https://github.com/lgezyxr/wqbackend .
